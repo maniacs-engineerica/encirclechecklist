@@ -1,0 +1,517 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		246F7CCC9984805D34E5F991 /* Pods_EncircleChecklist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46619A23ED11663032B835D7 /* Pods_EncircleChecklist.framework */; };
+		609F054C26949863008E0AB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F054B26949863008E0AB9 /* AppDelegate.swift */; };
+		609F055026949863008E0AB9 /* CheckListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F054F26949863008E0AB9 /* CheckListViewController.swift */; };
+		609F055526949876008E0AB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 609F055426949876008E0AB9 /* Assets.xcassets */; };
+		609F055826949876008E0AB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 609F055626949876008E0AB9 /* LaunchScreen.storyboard */; };
+		609F056526949E62008E0AB9 /* CheckListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609F056426949E62008E0AB9 /* CheckListViewController.xib */; };
+		609F056B26949FF6008E0AB9 /* CheckListItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 609F056A26949FF6008E0AB9 /* CheckListItemTableViewCell.xib */; };
+		609F05832694B12D008E0AB9 /* EncircleCheckList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 609F05812694B12D008E0AB9 /* EncircleCheckList.xcdatamodeld */; };
+		609F058C2694B178008E0AB9 /* CheckListItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F05882694B178008E0AB9 /* CheckListItemRepository.swift */; };
+		609F058D2694B178008E0AB9 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F05892694B178008E0AB9 /* Repository.swift */; };
+		609F058F2694B178008E0AB9 /* RepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F058B2694B178008E0AB9 /* RepositoryFactory.swift */; };
+		609F059A2694F3B4008E0AB9 /* CheckListItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609F05992694F3B4008E0AB9 /* CheckListItemTableViewCell.swift */; };
+		60E3C6C6269E2AEC000AF27C /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E3C6C5269E2AEC000AF27C /* ItemViewController.swift */; };
+		60E3C6C8269E2AFC000AF27C /* ItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60E3C6C7269E2AFC000AF27C /* ItemViewController.xib */; };
+		60E3C6CA269E42E0000AF27C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60E3C6C9269E42E0000AF27C /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		46619A23ED11663032B835D7 /* Pods_EncircleChecklist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EncircleChecklist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48EB88DD07DD066D92B78E6D /* Pods-EncircleChecklist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EncircleChecklist.debug.xcconfig"; path = "Target Support Files/Pods-EncircleChecklist/Pods-EncircleChecklist.debug.xcconfig"; sourceTree = "<group>"; };
+		609F054826949863008E0AB9 /* EncircleChecklist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EncircleChecklist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		609F054B26949863008E0AB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		609F054F26949863008E0AB9 /* CheckListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListViewController.swift; sourceTree = "<group>"; };
+		609F055426949876008E0AB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		609F055726949876008E0AB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		609F055926949876008E0AB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		609F056426949E62008E0AB9 /* CheckListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckListViewController.xib; sourceTree = "<group>"; };
+		609F056A26949FF6008E0AB9 /* CheckListItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckListItemTableViewCell.xib; sourceTree = "<group>"; };
+		609F05822694B12D008E0AB9 /* EncircleCheckList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EncircleCheckList.xcdatamodel; sourceTree = "<group>"; };
+		609F05882694B178008E0AB9 /* CheckListItemRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckListItemRepository.swift; sourceTree = "<group>"; };
+		609F05892694B178008E0AB9 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		609F058B2694B178008E0AB9 /* RepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryFactory.swift; sourceTree = "<group>"; };
+		609F05992694F3B4008E0AB9 /* CheckListItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListItemTableViewCell.swift; sourceTree = "<group>"; };
+		60E3C6C5269E2AEC000AF27C /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		60E3C6C7269E2AFC000AF27C /* ItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemViewController.xib; sourceTree = "<group>"; };
+		60E3C6C9269E42E0000AF27C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E15DCB59AB48CF1040A7BAE8 /* Pods-EncircleChecklist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EncircleChecklist.release.xcconfig"; path = "Target Support Files/Pods-EncircleChecklist/Pods-EncircleChecklist.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		609F054526949863008E0AB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				246F7CCC9984805D34E5F991 /* Pods_EncircleChecklist.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47A3B8BFCB7331CDFA73B3A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48EB88DD07DD066D92B78E6D /* Pods-EncircleChecklist.debug.xcconfig */,
+				E15DCB59AB48CF1040A7BAE8 /* Pods-EncircleChecklist.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		609F053F26949863008E0AB9 = {
+			isa = PBXGroup;
+			children = (
+				609F054A26949863008E0AB9 /* EncircleChecklist */,
+				609F054926949863008E0AB9 /* Products */,
+				47A3B8BFCB7331CDFA73B3A7 /* Pods */,
+				C07A1426FE7886108E479D48 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		609F054926949863008E0AB9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				609F054826949863008E0AB9 /* EncircleChecklist.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		609F054A26949863008E0AB9 /* EncircleChecklist */ = {
+			isa = PBXGroup;
+			children = (
+				609F05972694F390008E0AB9 /* Views */,
+				609F05862694B178008E0AB9 /* CoreData */,
+				609F056326949CF5008E0AB9 /* ViewControllers */,
+				609F056126949CC4008E0AB9 /* Nibs */,
+				609F054B26949863008E0AB9 /* AppDelegate.swift */,
+				609F055426949876008E0AB9 /* Assets.xcassets */,
+				609F055626949876008E0AB9 /* LaunchScreen.storyboard */,
+				609F055926949876008E0AB9 /* Info.plist */,
+				60E3C6C9269E42E0000AF27C /* GoogleService-Info.plist */,
+			);
+			path = EncircleChecklist;
+			sourceTree = "<group>";
+		};
+		609F056126949CC4008E0AB9 /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+				609F056926949FE1008E0AB9 /* ViewCells */,
+				609F056826949FD5008E0AB9 /* ViewControllers */,
+			);
+			path = Nibs;
+			sourceTree = "<group>";
+		};
+		609F056326949CF5008E0AB9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				609F054F26949863008E0AB9 /* CheckListViewController.swift */,
+				60E3C6C5269E2AEC000AF27C /* ItemViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		609F056826949FD5008E0AB9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				609F056426949E62008E0AB9 /* CheckListViewController.xib */,
+				60E3C6C7269E2AFC000AF27C /* ItemViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		609F056926949FE1008E0AB9 /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				609F056A26949FF6008E0AB9 /* CheckListItemTableViewCell.xib */,
+			);
+			path = ViewCells;
+			sourceTree = "<group>";
+		};
+		609F05862694B178008E0AB9 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				609F05812694B12D008E0AB9 /* EncircleCheckList.xcdatamodeld */,
+				609F05872694B178008E0AB9 /* Repository */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		609F05872694B178008E0AB9 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				609F05882694B178008E0AB9 /* CheckListItemRepository.swift */,
+				609F05892694B178008E0AB9 /* Repository.swift */,
+				609F058B2694B178008E0AB9 /* RepositoryFactory.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		609F05972694F390008E0AB9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				609F05982694F398008E0AB9 /* ViewCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		609F05982694F398008E0AB9 /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				609F05992694F3B4008E0AB9 /* CheckListItemTableViewCell.swift */,
+			);
+			path = ViewCells;
+			sourceTree = "<group>";
+		};
+		C07A1426FE7886108E479D48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46619A23ED11663032B835D7 /* Pods_EncircleChecklist.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		609F054726949863008E0AB9 /* EncircleChecklist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 609F055C26949876008E0AB9 /* Build configuration list for PBXNativeTarget "EncircleChecklist" */;
+			buildPhases = (
+				6EB55BAF20A7B5DD74B1D486 /* [CP] Check Pods Manifest.lock */,
+				609F054426949863008E0AB9 /* Sources */,
+				609F054526949863008E0AB9 /* Frameworks */,
+				609F054626949863008E0AB9 /* Resources */,
+				FB493397944055416272613A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EncircleChecklist;
+			productName = EncircleChecklist;
+			productReference = 609F054826949863008E0AB9 /* EncircleChecklist.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		609F054026949863008E0AB9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					609F054726949863008E0AB9 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 609F054326949863008E0AB9 /* Build configuration list for PBXProject "EncircleChecklist" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 609F053F26949863008E0AB9;
+			productRefGroup = 609F054926949863008E0AB9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				609F054726949863008E0AB9 /* EncircleChecklist */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		609F054626949863008E0AB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				609F056B26949FF6008E0AB9 /* CheckListItemTableViewCell.xib in Resources */,
+				609F055826949876008E0AB9 /* LaunchScreen.storyboard in Resources */,
+				60E3C6C8269E2AFC000AF27C /* ItemViewController.xib in Resources */,
+				609F056526949E62008E0AB9 /* CheckListViewController.xib in Resources */,
+				609F055526949876008E0AB9 /* Assets.xcassets in Resources */,
+				60E3C6CA269E42E0000AF27C /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6EB55BAF20A7B5DD74B1D486 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EncircleChecklist-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB493397944055416272613A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EncircleChecklist/Pods-EncircleChecklist-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EncircleChecklist/Pods-EncircleChecklist-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EncircleChecklist/Pods-EncircleChecklist-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		609F054426949863008E0AB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				609F055026949863008E0AB9 /* CheckListViewController.swift in Sources */,
+				609F058F2694B178008E0AB9 /* RepositoryFactory.swift in Sources */,
+				609F05832694B12D008E0AB9 /* EncircleCheckList.xcdatamodeld in Sources */,
+				609F054C26949863008E0AB9 /* AppDelegate.swift in Sources */,
+				609F058C2694B178008E0AB9 /* CheckListItemRepository.swift in Sources */,
+				609F059A2694F3B4008E0AB9 /* CheckListItemTableViewCell.swift in Sources */,
+				609F058D2694B178008E0AB9 /* Repository.swift in Sources */,
+				60E3C6C6269E2AEC000AF27C /* ItemViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		609F055626949876008E0AB9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				609F055726949876008E0AB9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		609F055A26949876008E0AB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		609F055B26949876008E0AB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		609F055D26949876008E0AB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48EB88DD07DD066D92B78E6D /* Pods-EncircleChecklist.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5NAYF6TJ97;
+				INFOPLIST_FILE = EncircleChecklist/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.matiascohen.EncircleChecklist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		609F055E26949876008E0AB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E15DCB59AB48CF1040A7BAE8 /* Pods-EncircleChecklist.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5NAYF6TJ97;
+				INFOPLIST_FILE = EncircleChecklist/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.matiascohen.EncircleChecklist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		609F054326949863008E0AB9 /* Build configuration list for PBXProject "EncircleChecklist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				609F055A26949876008E0AB9 /* Debug */,
+				609F055B26949876008E0AB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		609F055C26949876008E0AB9 /* Build configuration list for PBXNativeTarget "EncircleChecklist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				609F055D26949876008E0AB9 /* Debug */,
+				609F055E26949876008E0AB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		609F05812694B12D008E0AB9 /* EncircleCheckList.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				609F05822694B12D008E0AB9 /* EncircleCheckList.xcdatamodel */,
+			);
+			currentVersion = 609F05822694B12D008E0AB9 /* EncircleCheckList.xcdatamodel */;
+			path = EncircleCheckList.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 609F054026949863008E0AB9 /* Project object */;
+}

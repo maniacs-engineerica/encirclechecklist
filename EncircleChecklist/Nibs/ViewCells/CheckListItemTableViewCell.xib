@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CheckListItem" rowHeight="63" id="Kdb-CQ-lF8" customClass="CheckListItemTableViewCell" customModule="EncircleChecklist" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="63"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kdb-CQ-lF8" id="1Gb-93-42t">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="63"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bananas" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOM-FG-9nR">
+                        <rect key="frame" x="20" y="12" width="374" height="24.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Wed, February 14th" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3K-VF-wvO">
+                        <rect key="frame" x="20" y="36.5" width="374" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="nOM-FG-9nR" secondAttribute="trailing" id="0hB-pt-Rb3"/>
+                    <constraint firstAttribute="bottom" secondItem="E3K-VF-wvO" secondAttribute="bottom" constant="12" id="FeE-oa-3X8"/>
+                    <constraint firstItem="E3K-VF-wvO" firstAttribute="top" secondItem="nOM-FG-9nR" secondAttribute="bottom" id="MvB-GX-ayT"/>
+                    <constraint firstItem="E3K-VF-wvO" firstAttribute="leading" secondItem="1Gb-93-42t" secondAttribute="leadingMargin" id="doe-Jf-z5d"/>
+                    <constraint firstItem="nOM-FG-9nR" firstAttribute="leading" secondItem="1Gb-93-42t" secondAttribute="leadingMargin" id="jNP-9o-yUE"/>
+                    <constraint firstItem="nOM-FG-9nR" firstAttribute="top" secondItem="1Gb-93-42t" secondAttribute="top" constant="12" id="xdL-pq-Lp8"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="E3K-VF-wvO" secondAttribute="trailing" id="zBH-Md-OL6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateView" destination="E3K-VF-wvO" id="K3t-At-2cK"/>
+                <outlet property="titleView" destination="nOM-FG-9nR" id="zmA-xx-rUb"/>
+            </connections>
+            <point key="canvasLocation" x="160.86956521739131" y="57.924107142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
