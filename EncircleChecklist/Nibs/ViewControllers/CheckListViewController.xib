@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="M6R-78-jiT">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="Q3j-ef-U2r"/>
@@ -34,20 +34,34 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SQ6-vM-L3g">
+                    <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="YKF-gR-jLM"/>
+                        <barButtonItem systemItem="compose" id="tYI-du-6NO">
+                            <connections>
+                                <action selector="addDidPress:" destination="-1" id="QMH-hQ-7zu"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="M6R-78-jiT" secondAttribute="bottom" id="7x9-Xs-ea3"/>
+                <constraint firstItem="SQ6-vM-L3g" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="1S0-p5-KGz"/>
+                <constraint firstItem="SQ6-vM-L3g" firstAttribute="top" secondItem="M6R-78-jiT" secondAttribute="bottom" id="6J9-Kl-5RV"/>
                 <constraint firstItem="M6R-78-jiT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="AQD-01-mLR"/>
                 <constraint firstItem="Dqr-rQ-0cS" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="IAs-Mx-0ba"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="M6R-78-jiT" secondAttribute="trailing" id="KAi-7M-5L0"/>
                 <constraint firstItem="M6R-78-jiT" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="RTg-DF-T33"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Dqr-rQ-0cS" secondAttribute="trailing" constant="16" id="Zud-dI-AjA"/>
                 <constraint firstItem="Dqr-rQ-0cS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="adf-rM-VsR"/>
+                <constraint firstItem="SQ6-vM-L3g" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="jhs-ja-St8"/>
+                <constraint firstItem="SQ6-vM-L3g" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="sEP-Uk-mfg"/>
                 <constraint firstItem="Dqr-rQ-0cS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="tqf-mI-DUj"/>
             </constraints>
-            <point key="canvasLocation" x="-151" y="92"/>
+            <point key="canvasLocation" x="-152.17391304347828" y="91.741071428571431"/>
         </view>
     </objects>
     <resources>

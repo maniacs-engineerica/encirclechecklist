@@ -11,12 +11,12 @@ import CoreData
 
 class RepositoryFactory {
     
-    private var context: NSManagedObjectContext {
+    private lazy var context: NSManagedObjectContext = {
         return (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    }
-    
-    func itemRepository() -> CheckListItemRepository {
-        return CheckListItemRepository(context: context)
+    }()
+
+    func itemRepository(context: NSManagedObjectContext? = nil) -> CheckListItemRepository {
+        return CheckListItemRepository(context: context ?? self.context)
     }
     
 }

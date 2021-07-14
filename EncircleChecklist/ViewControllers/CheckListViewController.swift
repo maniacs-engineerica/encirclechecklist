@@ -7,16 +7,19 @@
 
 import UIKit
 
-import Firebase
+import FirebaseCrashlytics
 
 class CheckListViewController: UIViewController, ItemViewControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    
     @IBOutlet weak var noItemsMessageView: UILabel! {
         didSet{
             noItemsMessageView.text = "(+)\nAdd new items!"
         }
     }
+    
+    private lazy var repository = RepositoryFactory().itemRepository()
     
     var items = [CheckListItem]()
     
@@ -33,23 +36,33 @@ class CheckListViewController: UIViewController, ItemViewControllerDelegate {
     }
     
     private func setupRightBarButton(){
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addDidPress))
+        let systemItem: UIBarButtonItem.SystemItem = !tableView.isEditing ? .edit : .cancel
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: systemItem, target: self, action: #selector(editModeDidPress))
     }
     
     private func setupTableView(){
         let nib = UINib(nibName: "CheckListItemTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "CheckListItem")
+        tableView.allowsSelectionDuringEditing = true
+        tableView.allowsMultipleSelectionDuringEditing = false
     }
     
     private func loadItems(){
         do {
-            items = try RepositoryFactory().itemRepository().get()
+            items = try repository.get()
         } catch let error {
             Crashlytics.crashlytics().record(error: error)
         }
     }
     
-    @objc private func addDidPress(){
+    
+    @objc private func editModeDidPress() {
+        tableView.isEditing = !tableView.isEditing
+        setupRightBarButton()
+    }
+    
+    @IBAction func addDidPress(_ sender: Any) {
+        tableView.isEditing = false
         edit()
     }
     
@@ -106,35 +119,28 @@ extension CheckListViewController: UITableViewDataSource, UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         let item = items[indexPath.row]
-        showOptions(for: item)
+        
+        if (tableView.isEditing){
+            edit(item: item)
+        } else {
+            checkOrUncheck(item: item)
+        }
     }
     
-    private func showOptions(for item: CheckListItem){
-        let controller = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
-        let check = UIAlertAction(title: item.checked ? "Uncheck" : "Check", style: .default) { _ in
-            self.checkOrUncheck(item: item)
+        guard editingStyle == .delete else { return }
+        
+        let item = items[indexPath.row]
+        if (repository.delete(object: item)){
+            itemDidRemove(item)
         }
-        controller.addAction(check)
-        
-        let edit = UIAlertAction(title: "Edit", style: .default) { _ in
-            self.edit(item: item)
-        }
-        controller.addAction(edit)
-        
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        controller.addAction(cancel)
-        
-        present(controller, animated: true, completion: nil)
     }
     
     private func checkOrUncheck(item: CheckListItem){
         item.checked = !item.checked
-        do {
-            try RepositoryFactory().itemRepository().context.save()
+        if (repository.save()){
             itemDidSave(item)
-        } catch let error {
-            Crashlytics.crashlytics().record(error: error)
         }
     }
     

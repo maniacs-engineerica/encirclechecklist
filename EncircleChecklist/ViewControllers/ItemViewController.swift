@@ -7,16 +7,15 @@
 
 import UIKit
 
-import Firebase
-
 protocol ItemViewControllerDelegate {
     func itemDidSave(_ item: CheckListItem)
-    func itemDidRemove(_ item: CheckListItem)
 }
 
 class ItemViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
+    
+    private lazy var repository = RepositoryFactory().itemRepository()
     
     var item: CheckListItem?
     var delegate: ItemViewControllerDelegate?
@@ -32,18 +31,14 @@ class ItemViewController: UIViewController {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        textView.resignFirstResponder()
+    }
+    
     private func setupRightBarButtons() {
-        var actions = [UIBarButtonItem]()
-        
         let save = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveDidPress))
-        actions.append(save)
-        
-        if item != nil {
-            let trash = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(removeDidPress))
-            actions.append(trash)
-        }
-        
-        navigationItem.rightBarButtonItems = actions
+        navigationItem.rightBarButtonItem = save
     }
     
     private func setupTextView(){
@@ -55,33 +50,14 @@ class ItemViewController: UIViewController {
     @objc private func saveDidPress(){
         let item = item ?? createItem()
         item.title = textView.text
-        do {
-            try RepositoryFactory().itemRepository().context.save()
+        if (repository.save()){
             delegate?.itemDidSave(item)
-        } catch let error {
-            //TODO:
-            print(error)
         }
-        close()
-    }
-    
-    @objc private func removeDidPress(){
-        guard let item = item else { return }
-        
-        do {
-            let context = RepositoryFactory().itemRepository().context
-            context.delete(item)
-            delegate?.itemDidRemove(item)
-            try context.save()
-        } catch let error {
-            Crashlytics.crashlytics().record(error: error)
-        }
-        
         close()
     }
     
     private func createItem() -> CheckListItem {
-        let item = RepositoryFactory().itemRepository().create()
+        let item = repository.create()
         item.id = UUID()
         item.creationDate = Date()
         return item

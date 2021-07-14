@@ -8,10 +8,11 @@
 import UIKit
 
 import CoreData
+import FirebaseCrashlytics
 
 class Repository<Entity: NSManagedObject> {
 
-    let context: NSManagedObjectContext
+    private let context: NSManagedObjectContext
     
     init(context: NSManagedObjectContext) {
         self.context = context
@@ -27,5 +28,20 @@ class Repository<Entity: NSManagedObject> {
         let request = NSFetchRequest<Entity>(entityName: entityName)
         request.predicate = predicate
         return try context.fetch(request)
+    }
+    
+    func save() -> Bool{
+        do {
+            try context.save()
+            return true
+        } catch let error {
+            Crashlytics.crashlytics().record(error: error)
+            return false
+        }
+    }
+    
+    func delete(object: Entity) -> Bool {
+        context.delete(object)
+        return save()
     }
 }

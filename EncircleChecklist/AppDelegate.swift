@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         
+        UINavigationBar.appearance().isTranslucent = false
+        
         let window = UIWindow(frame: UIScreen.main.bounds)
         let controller = CheckListViewController(nibName: "CheckListViewController", bundle: nil)
         let navigation = UINavigationController(rootViewController: controller)
